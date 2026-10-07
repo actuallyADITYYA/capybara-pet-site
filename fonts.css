@@ -1,0 +1,6 @@
+/* self-hosted (Latin subset, variable): no third-party request, no late font swap */
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 600 800; font-display: swap; src: url(fonts/bricolage.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/inter.woff2) format('woff2'); }
+/* metric-matched fallbacks so the swap, if it ever happens, does not move the layout */
+@font-face { font-family: 'Inter Fallback'; src: local('Arial'); size-adjust: 107%; ascent-override: 90%; descent-override: 22%; line-gap-override: 0%; }
+@font-face { font-family: 'Bricolage Fallback'; src: local('Arial'); size-adjust: 96%; ascent-override: 96%; descent-override: 24%; line-gap-override: 0%; }
