@@ -11,7 +11,7 @@
     var c = $('capy'), off = document.createElement('canvas');
     off.width = off.height = Sprite.G;
     Sprite.renderFrame(c.getContext('2d'), off, 1, Object.assign(Sprite.defaultPose(), { eyeMode: 'happy', mouth: 'smile', blush: true }),
-      { furColor: look.fur, blushColor: look.blush, pattern: look.pattern, accessory: look.acc || 'carrot' });
+      { furColor: look.fur, blushColor: look.blush, pattern: look.pattern });
   }
   draw({ fur: '#a76c4c', blush: '#eca8a8', pattern: 'classic' });
   if (!ok) {
