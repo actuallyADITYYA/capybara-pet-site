@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://capybara-pet-relay.capybara-pet-relay.workers.dev; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You're invited · Capybara Pet</title>
+  <meta name="description" content="A friend wants their capybara to meet yours. Open the invite in Capybara Pet.">
+  <meta property="og:title" content="Your friend's capybara wants to meet yours">
+  <meta property="og:description" content="Open this invite in Capybara Pet to become friends: waves, pokes and messages between your desktop capybaras.">
+  <meta property="og:image" content="https://capybarapet.app/media/icon.png">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/media/icon.png">
+  <link rel="stylesheet" href="/fonts.css?v=11">
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <style>
+    .invite { text-align: center; padding-top: 72px; }
+    .invite canvas { width: 288px; height: 288px; image-rendering: pixelated; display: block; margin: 0 auto; }
+    .invite h1 { font-size: clamp(30px, 6vw, 48px); margin: 8px 0 10px; }
+    .invite .code { display: inline-block; font: 700 20px ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .08em; padding: 10px 16px; border-radius: 12px; background: rgba(0,0,0,.06); margin: 6px 0 22px; user-select: all; }
+    .invite .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .invite .actions a { display: inline-flex; align-items: center; height: 48px; padding: 0 22px; border-radius: 24px; font-weight: 700; text-decoration: none; }
+    .invite .open { background: #ff8a3d; color: #1f0e03; }
+    .invite .get { background: rgba(0,0,0,.07); color: inherit; }
+    .invite .steps { max-width: 440px; margin: 28px auto 0; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <main class="wrap narrow page invite">
+    <canvas id="capy" width="96" height="96" aria-label="Your friend's capybara"></canvas>
+    <h1 id="title">A capybara wants to be friends</h1>
+    <p class="muted" id="sub">Open this invite in Capybara Pet and your capybaras can wave, poke and message each other.</p>
+    <div class="code" id="code"></div>
+    <div class="actions">
+      <a class="open" id="open" href="#">Open in Capybara Pet</a>
+      <a class="get" href="/">Get Capybara Pet</a>
+    </div>
+    <p class="muted steps">Nothing happened? In Capybara Pet, open the island, go to Friends, choose Add and paste the code above.</p>
+  </main>
+  <script src="/engine.min.js?v=2"></script>
+  <script src="/f/invite.js?v=1"></script>
+</body>
+</html>
